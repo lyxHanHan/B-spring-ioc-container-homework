@@ -2,6 +2,8 @@ package com.thoughtworks.capability.demospringioccontainer;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+
 @Component
 public class Foo {
 
@@ -18,4 +20,10 @@ public class Foo {
     public String name() {
         return "Foo";
     }
+
+    @PostConstruct
+    public void init() {
+        bar.setBar(this);
+    }
+
 }
