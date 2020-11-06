@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 public class GreetingService {
 
     String sayHi() {
+        System.out.println("GreetingService");
+
         return "hello world";
     }
+
 }
